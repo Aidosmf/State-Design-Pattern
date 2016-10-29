@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DPAT_TP029483">
+  <ClassDiagramComponents>
+    <Class name="Data" package="statedpat_tp029483" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="aidos" type="User" visibility="private" isStatic="true"/>
+        <Field name="alan" type="User" visibility="private" isStatic="true"/>
+        <Field name="vasya" type="User" visibility="private" isStatic="true"/>
+        <Field name="users" type="ArrayList&lt;User&gt;" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="HasPermission" package="statedpat_tp029483" visibility="public" xPosition="938.0" yPosition="496.0">
+      <Fields>
+        <Field name="user" type="User" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="User" name="newUser"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="signIn" returnType="void" visibility="public">
+          <Argument type="int" name="passwordEntered"/>
+        </Method>
+        <Method name="signOut" returnType="void" visibility="public"/>
+        <Method name="viewDetails" returnType="void" visibility="public"/>
+        <Method name="viewDetails" returnType="void" visibility="public">
+          <Argument type="int" name="userNumber"/>
+        </Method>
+        <Method name="editDetails" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="email"/>
+          <Argument type="int" name="password"/>
+        </Method>
+        <Method name="showUsers" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="NoPermission" package="statedpat_tp029483" visibility="public" xPosition="961.0" yPosition="739.0">
+      <Fields>
+        <Field name="user" type="User" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="User" name="newUser"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="signIn" returnType="void" visibility="public">
+          <Argument type="int" name="passwordEntered"/>
+        </Method>
+        <Method name="signOut" returnType="void" visibility="public"/>
+        <Method name="viewDetails" returnType="void" visibility="public"/>
+        <Method name="editDetails" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="email"/>
+          <Argument type="int" name="password"/>
+        </Method>
+        <Method name="showUsers" returnType="void" visibility="public"/>
+        <Method name="viewDetails" returnType="void" visibility="public">
+          <Argument type="int" name="userNumber"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TestUser" package="statedpat_tp029483" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="User" package="statedpat_tp029483" visibility="public" xPosition="420.0" yPosition="20.0">
+      <Fields>
+        <Field name="hasPermission" type="UserState" visibility="private"/>
+        <Field name="noPermission" type="UserState" visibility="private"/>
+        <Field name="userState" type="UserState" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="password" type="int" visibility="private"/>
+        <Field name="correctPasswordEntered" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="email"/>
+          <Argument type="int" name="password"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="getPassword" returnType="int" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="int" name="password"/>
+        </Method>
+        <Method name="getCorrectPasswordEntered" returnType="boolean" visibility="public"/>
+        <Method name="setCorrectPasswordEntered" returnType="void" visibility="public">
+          <Argument type="boolean" name="set"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="toString1" returnType="String" visibility="public"/>
+        <Method name="setUserState" returnType="void" visibility="package">
+          <Argument type="UserState" name="newUserState"/>
+        </Method>
+        <Method name="signIn" returnType="void" visibility="public">
+          <Argument type="int" name="passwordEntered"/>
+        </Method>
+        <Method name="signOut" returnType="void" visibility="public"/>
+        <Method name="showUsers" returnType="void" visibility="public"/>
+        <Method name="viewDetails" returnType="void" visibility="public"/>
+        <Method name="viewDetails" returnType="void" visibility="public">
+          <Argument type="int" name="userNumber"/>
+        </Method>
+        <Method name="editDetails" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="email"/>
+          <Argument type="int" name="password"/>
+        </Method>
+        <Method name="getUserState" returnType="UserState" visibility="public"/>
+        <Method name="getYesPermissionState" returnType="UserState" visibility="public"/>
+        <Method name="getNoPermissionState" returnType="UserState" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="UserState" package="statedpat_tp029483" visibility="public" xPosition="1121.0" yPosition="167.0">
+      <Methods>
+        <Method name="signIn" returnType="void" visibility="package">
+          <Argument type="int" name="passwordEntered"/>
+        </Method>
+        <Method name="signOut" returnType="void" visibility="package"/>
+        <Method name="showUsers" returnType="void" visibility="package"/>
+        <Method name="viewDetails" returnType="void" visibility="package"/>
+        <Method name="viewDetails" returnType="void" visibility="package">
+          <Argument type="int" name="userNumber"/>
+        </Method>
+        <Method name="editDetails" returnType="void" visibility="package">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="email"/>
+          <Argument type="int" name="password"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="noPermission" source="statedpat_tp029483.User" target="statedpat_tp029483.UserState" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="users" source="statedpat_tp029483.Data" target="statedpat_tp029483.User" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;User&gt;"/>
+    <HasRelation name="user" source="statedpat_tp029483.NoPermission" target="statedpat_tp029483.User" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hasPermission" source="statedpat_tp029483.User" target="statedpat_tp029483.UserState" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="user" source="statedpat_tp029483.HasPermission" target="statedpat_tp029483.User" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vasya" source="statedpat_tp029483.Data" target="statedpat_tp029483.User" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="statedpat_tp029483.User" target="statedpat_tp029483.UserState" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="statedpat_tp029483.NoPermission" target="statedpat_tp029483.UserState"/>
+    <HasRelation name="userState" source="statedpat_tp029483.User" target="statedpat_tp029483.UserState" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="alan" source="statedpat_tp029483.Data" target="statedpat_tp029483.User" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="aidos" source="statedpat_tp029483.Data" target="statedpat_tp029483.User" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="statedpat_tp029483.HasPermission" target="statedpat_tp029483.UserState"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
